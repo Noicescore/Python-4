@@ -15,18 +15,18 @@ with st.form(key="td"):
     fsb=st.form_submit_button("Gửi dữ liệu")
 if fsb==True:
     with st.expander("Kế hoạch đã chọn"):
-        st.subheader(f"Bạn đã chọn món khai vị:")
         if len(chonmkv)==0:
             st.warning("Bạn chưa chọn món khai vị")
         else:
+            st.subheader(f"Bạn đã chọn món khai vị:")
             for monan in chonmkv:
                 st.write(monan)
         st.subheader(f"Bạn đã chọn món chính:")
         st.write(chonmc)
-        st.subheader(f"Bạn đã chọn món tráng miệng:")
         if len(chonmtm)==0:
             st.warning("Bạn chưa chọn món tráng miệng")
         else:
+            st.subheader(f"Bạn đã chọn món tráng miệng:")
             for monan in chonmtm:
                 st.write(monan)
         st.subheader(f"Bạn đã chọn đồ uống:")
